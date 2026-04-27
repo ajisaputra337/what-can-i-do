@@ -16,8 +16,13 @@ export function CountUp({
   className,
 }: CountUpProps) {
   const [value, setValue] = React.useState(0);
+  const [mounted, setMounted] = React.useState(false);
   const ref = React.useRef<HTMLSpanElement | null>(null);
   const startedRef = React.useRef(false);
+
+  React.useEffect(() => {
+    setMounted(true);
+  }, []);
 
   React.useEffect(() => {
     const node = ref.current;
@@ -52,7 +57,7 @@ export function CountUp({
   return (
     <span ref={ref} className={className}>
       {prefix}
-      {value.toLocaleString("id-ID")}
+      {mounted ? value.toLocaleString("id-ID") : "0"}
       {suffix}
     </span>
   );
