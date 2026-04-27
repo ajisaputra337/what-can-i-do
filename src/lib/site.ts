@@ -38,7 +38,7 @@ export const SITE = {
   ],
 } as const;
 
-export const waLink = (msg = SITE.whatsappMessage) =>
+export const waLink = (msg: string = SITE.whatsappMessage): string =>
   `https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent(msg)}`;
 
 export const telLink = `tel:${SITE.phoneRaw}`;
