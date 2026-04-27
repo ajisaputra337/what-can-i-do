@@ -63,6 +63,7 @@ Semua animasi pakai CSS transforms + opacity (GPU-accelerated), no heavy library
 ## Gambar (AI + Placeholder)
 
 **AI generated** (Nano Banana, disimpan di `src/assets/`):
+
 - Hero: suasana Jepang modern dengan sakura & bangunan tradisional
 - Welcome: ilustrasi kelas bahasa Jepang
 - Section magang: pemagang Indonesia di Jepang (suasana kerja profesional)
@@ -70,6 +71,7 @@ Semua animasi pakai CSS transforms + opacity (GPU-accelerated), no heavy library
 - Icon-icon untuk 14 sektor SSW
 
 **Placeholder** (Anda upload nanti):
+
 - Galeri foto kegiatan (6-12 slot dengan label jelas "Upload foto kegiatan di sini")
 - Foto tim/instruktur
 - Logo legalitas/sertifikat
@@ -77,7 +79,7 @@ Semua animasi pakai CSS transforms + opacity (GPU-accelerated), no heavy library
 ## SEO Lengkap
 
 - **Per-route metadata**: title, description, og:title, og:description, og:image unik tiap halaman
-- **Structured data JSON-LD**: 
+- **Structured data JSON-LD**:
   - `EducationalOrganization` schema di root
   - `LocalBusiness` schema dengan 3 alamat
   - `BreadcrumbList` di tiap halaman
