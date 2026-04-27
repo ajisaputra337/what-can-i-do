@@ -9,8 +9,56 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as UjianRouteImport } from './routes/ujian'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as ProgramRouteImport } from './routes/program'
+import { Route as ProfileRouteImport } from './routes/profile'
+import { Route as PendaftaranRouteImport } from './routes/pendaftaran'
+import { Route as LegalitasRouteImport } from './routes/legalitas'
+import { Route as GaleriRouteImport } from './routes/galeri'
+import { Route as BeritaRouteImport } from './routes/berita'
 import { Route as IndexRouteImport } from './routes/index'
 
+const UjianRoute = UjianRouteImport.update({
+  id: '/ujian',
+  path: '/ujian',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProgramRoute = ProgramRouteImport.update({
+  id: '/program',
+  path: '/program',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProfileRoute = ProfileRouteImport.update({
+  id: '/profile',
+  path: '/profile',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PendaftaranRoute = PendaftaranRouteImport.update({
+  id: '/pendaftaran',
+  path: '/pendaftaran',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LegalitasRoute = LegalitasRouteImport.update({
+  id: '/legalitas',
+  path: '/legalitas',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GaleriRoute = GaleriRouteImport.update({
+  id: '/galeri',
+  path: '/galeri',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BeritaRoute = BeritaRouteImport.update({
+  id: '/berita',
+  path: '/berita',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -19,28 +67,144 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/berita': typeof BeritaRoute
+  '/galeri': typeof GaleriRoute
+  '/legalitas': typeof LegalitasRoute
+  '/pendaftaran': typeof PendaftaranRoute
+  '/profile': typeof ProfileRoute
+  '/program': typeof ProgramRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/ujian': typeof UjianRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/berita': typeof BeritaRoute
+  '/galeri': typeof GaleriRoute
+  '/legalitas': typeof LegalitasRoute
+  '/pendaftaran': typeof PendaftaranRoute
+  '/profile': typeof ProfileRoute
+  '/program': typeof ProgramRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/ujian': typeof UjianRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/berita': typeof BeritaRoute
+  '/galeri': typeof GaleriRoute
+  '/legalitas': typeof LegalitasRoute
+  '/pendaftaran': typeof PendaftaranRoute
+  '/profile': typeof ProfileRoute
+  '/program': typeof ProgramRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/ujian': typeof UjianRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/berita'
+    | '/galeri'
+    | '/legalitas'
+    | '/pendaftaran'
+    | '/profile'
+    | '/program'
+    | '/sitemap.xml'
+    | '/ujian'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/berita'
+    | '/galeri'
+    | '/legalitas'
+    | '/pendaftaran'
+    | '/profile'
+    | '/program'
+    | '/sitemap.xml'
+    | '/ujian'
+  id:
+    | '__root__'
+    | '/'
+    | '/berita'
+    | '/galeri'
+    | '/legalitas'
+    | '/pendaftaran'
+    | '/profile'
+    | '/program'
+    | '/sitemap.xml'
+    | '/ujian'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  BeritaRoute: typeof BeritaRoute
+  GaleriRoute: typeof GaleriRoute
+  LegalitasRoute: typeof LegalitasRoute
+  PendaftaranRoute: typeof PendaftaranRoute
+  ProfileRoute: typeof ProfileRoute
+  ProgramRoute: typeof ProgramRoute
+  SitemapDotxmlRoute: typeof SitemapDotxmlRoute
+  UjianRoute: typeof UjianRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/ujian': {
+      id: '/ujian'
+      path: '/ujian'
+      fullPath: '/ujian'
+      preLoaderRoute: typeof UjianRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/program': {
+      id: '/program'
+      path: '/program'
+      fullPath: '/program'
+      preLoaderRoute: typeof ProgramRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/profile': {
+      id: '/profile'
+      path: '/profile'
+      fullPath: '/profile'
+      preLoaderRoute: typeof ProfileRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pendaftaran': {
+      id: '/pendaftaran'
+      path: '/pendaftaran'
+      fullPath: '/pendaftaran'
+      preLoaderRoute: typeof PendaftaranRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/legalitas': {
+      id: '/legalitas'
+      path: '/legalitas'
+      fullPath: '/legalitas'
+      preLoaderRoute: typeof LegalitasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/galeri': {
+      id: '/galeri'
+      path: '/galeri'
+      fullPath: '/galeri'
+      preLoaderRoute: typeof GaleriRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/berita': {
+      id: '/berita'
+      path: '/berita'
+      fullPath: '/berita'
+      preLoaderRoute: typeof BeritaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -53,6 +217,14 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  BeritaRoute: BeritaRoute,
+  GaleriRoute: GaleriRoute,
+  LegalitasRoute: LegalitasRoute,
+  PendaftaranRoute: PendaftaranRoute,
+  ProfileRoute: ProfileRoute,
+  ProgramRoute: ProgramRoute,
+  SitemapDotxmlRoute: SitemapDotxmlRoute,
+  UjianRoute: UjianRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
