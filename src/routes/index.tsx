@@ -20,7 +20,7 @@ import { CountUp } from "@/components/count-up";
 import { SakuraPetals } from "@/components/sakura-petals";
 import { SITE, mailLink, telLink, waLink } from "@/lib/site";
 import heroImg from "@/assets/hero-japan.jpg";
-import welcomeImg from "@/assets/welcome-class.jpg";
+import welcomeImg from "@/assets/group-training.jpg";
 import magangImg from "@/assets/magang-jepang.jpg";
 import ogImg from "@/assets/og-image.jpg";
 
@@ -345,7 +345,7 @@ function HomePage() {
               <div className="absolute -inset-4 rounded-3xl bg-primary/10 blur-2xl" />
               <img
                 src={welcomeImg}
-                alt="Suasana kelas Bahasa Jepang LPK Hangguk Nippon"
+                alt="Siswa LPK SO Hangguk Nippon saat mengikuti pelatihan profesional"
                 width={1024}
                 height={1024}
                 loading="lazy"
@@ -461,9 +461,7 @@ function HomePage() {
               delay={((i % 3) + 1) as 1 | 2 | 3}
             >
               <div className="hover-lift relative h-full overflow-hidden rounded-2xl border border-border bg-background p-7 shadow-[var(--shadow-card)]">
-                <div className="absolute -right-3 -top-3 select-none text-7xl font-black text-primary/5">
-                  {s.no}
-                </div>
+
                 <div className="relative">
                   <div className="inline-flex h-9 items-center justify-center rounded-full bg-primary px-3 text-xs font-bold text-primary-foreground">
                     Langkah {s.no}
@@ -506,17 +504,12 @@ function HomePage() {
             {COSTS.map((c, i) => (
               <SectionReveal key={c.title} delay={(i + 1) as 1 | 2 | 3}>
                 <div
-                  className={`hover-lift relative h-full rounded-2xl border p-7 transition-all ${
-                    c.highlight
-                      ? "border-primary bg-gradient-to-br from-primary to-[oklch(0.46_0.21_23)] shadow-[0_20px_50px_-12px_oklch(0.52_0.21_23/0.6)]"
-                      : "border-white/10 bg-white/5"
-                  }`}
+                  className={`hover-lift relative h-full rounded-2xl border p-7 transition-all ${c.highlight
+                    ? "border-primary bg-gradient-to-br from-primary to-[oklch(0.46_0.21_23)] shadow-[0_20px_50px_-12px_oklch(0.52_0.21_23/0.6)]"
+                    : "border-white/10 bg-white/5"
+                    }`}
                 >
-                  {c.highlight && (
-                    <div className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-[oklch(0.78_0.13_80)] px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-foreground">
-                      Populer
-                    </div>
-                  )}
+
                   <div className="text-xs font-semibold uppercase tracking-wider text-white/70">
                     {c.title}
                   </div>
