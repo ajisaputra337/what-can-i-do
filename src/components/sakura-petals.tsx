@@ -1,3 +1,5 @@
+import * as React from "react";
+
 /** Renders falling sakura petals with pure CSS — very lightweight */
 export function SakuraPetals({ count = 14 }: { count?: number }) {
   const [mounted, setMounted] = React.useState(false);
